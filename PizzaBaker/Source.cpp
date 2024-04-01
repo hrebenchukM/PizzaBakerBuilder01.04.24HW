@@ -203,6 +203,33 @@ public:
 
 
 
+class HyundaiGetzBuilder : public AutomobileBuilder
+{
+public:
+	void BuildName() override
+	{
+		automobile.SetName("Hyundai Getz");
+
+	}
+	void BuildFrame() override
+	{
+		automobile.SetFrame("ױועקב‎ך");
+	}
+	void BuildEngine() override
+	{
+		automobile.SetEngine(66);
+	}
+
+	void BuildWheels() override
+	{
+		automobile.SetWheels(13);
+	}
+	void BuildGearbox() override
+	{
+		automobile.SetGearbox("4 auto");
+	}
+};
+
 
 
 
@@ -276,6 +303,12 @@ void main()
 
 
 	builder = new UAZPatriotBuilder();
+	client(builder);
+	delete builder;
+
+
+
+	builder = new HyundaiGetzBuilder();
 	client(builder);
 	delete builder;
 
